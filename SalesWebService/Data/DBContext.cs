@@ -15,5 +15,14 @@ namespace SalesWebService.Data
         }
 
         public DbSet<SalesWebService.Models.Customer> Customer { get; set; }
+
+        public DbSet<SalesWebService.Models.Product> Product { get; set; }
+
+        public DbSet<SalesWebService.Models.Order> Order { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Product>(e => { e.HasIndex("Code").IsUnique(); });
+        }
     }
 }
