@@ -9,7 +9,7 @@ using SalesWebService.Data;
 namespace SalesWebService.Migrations
 {
     [DbContext(typeof(DBContext))]
-    [Migration("20200710194319_init")]
+    [Migration("20200713140836_init")]
     partial class init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
